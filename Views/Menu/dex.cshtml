@@ -1,0 +1,44 @@
+@model List<final.Models.Product>
+
+<div class="menu-page">
+
+    <h2 class="menu-title">DESSERT</h2>
+    <div class="menu-grid">
+        @foreach (var p in Model.Where(p => p.Category == "Dessert"))
+        {
+            <div class="menu-item">
+                <img src="@p.ImagePath" class="menu-img" />
+                <p class="menu-name">@p.Name</p>
+                <p class="menu-price">@p.Price CAD</p>
+            </div>
+        }
+    </div>
+
+    <h2 class="menu-title">DRINKS</h2>
+    <div class="menu-grid">
+        @foreach (var p in Model.Where(p => p.Category == "Drinks"))
+        {
+            <div class="menu-item">
+                <img src="@p.ImagePath" class="menu-img" />
+                <p class="menu-name">@p.Name</p>
+                <p class="menu-price">@p.Price CAD</p>
+            </div>
+        }
+    </div>
+
+    <h2 class="menu-title">CAKES</h2>
+    <div class="menu-grid">
+        @foreach (var p in Model.Where(p => p.Category == "Cakes"))
+        {
+            <div class="menu-item">
+                <img src="@p.ImagePath" class="menu-img" />
+                <p class="menu-name">@p.Name</p>
+                <p class="menu-price">@p.Price CAD</p>
+            </div>
+        }
+    </div>
+
+    <img src="~/images/tom.png" class="corner-img left">
+    <img src="~/images/jerry.png" class="corner-img right">
+
+</div>

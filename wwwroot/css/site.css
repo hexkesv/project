@@ -1,0 +1,223 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #E5F4BD;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #467F5C !important;
+    padding: 0;
+}
+
+.navbar-nav .nav-link {
+    color: #EDDF42 !important;
+    padding: 14px 25px !important;
+    margin: 0 !important;
+    text-decoration: none !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #467F5C !important;
+    background-color: #EDDF42 !important;
+}
+
+.navbar-nav .active {
+    color: #467F5C !important;
+    background-color: #EDDF42 !important;
+}
+
+.navbar-toggler {
+    border: none !important;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* HOME GIF */
+#myGif {
+    width: 100%;              /* full width */
+    height: 50vh;             /* full height */
+    object-fit: cover;         /* crop correctly */
+    object-position: center ;   /* center the image */
+    display: block;            /* remove white gap */
+    margin: 0;
+    padding: 0;
+    opacity: 0.6;             /* reduce opacity */
+}
+
+#myGifContainer,
+.hero,
+section,
+.container{
+    padding: 0;
+    margin: 0;
+}
+
+.hero,
+.container,
+section{
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    width: 100%;
+    background-color: #467F5C;
+    color: #EDDF42;
+    text-align: center;
+    padding: 0px 0;          /* LOWER FOOTER HEIGHT */
+    position: relative;
+    overflow: visible;
+}
+
+/* Both images */
+.footer-img {
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+    object-fit: contain;
+}
+
+/* TOM — make bigger */
+.footer-img.left {
+    left: -25px;
+    height: 350px;            /* BIGGER TOM */
+    bottom: -20px;            /* Makes him pop OUT below the green */
+}
+
+/* JERRY — make smaller */
+.footer-img.right {
+    right: -5px;
+    height: 180px;            /* SMALLER JERRY */
+    bottom: 0;
+}
+
+.footer-text {
+    position: relative;
+    z-index: 10;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.8;
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0;
+    }
+
+    .footer-img.left {
+        height: 160px;
+        left: -10px;
+    }
+
+    .footer-img.right {
+        height: 150px;
+        right: -5px;
+    }
+
+    .footer-text {
+        font-size: 18px;
+    }
+}
+
+
+.menu-page {
+    position: relative;
+    padding-bottom: 150px;
+}
+
+/*section*/
+.dessert-title,
+.drink-title,
+.cake-title {
+    text-align: center;
+    color: #C73719;
+    font-size: 36px;
+    font-weight: 800;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* GRID STYLE (MATCHES SCREENSHOT) */
+.dessert-grid,
+.drink-grid,
+.cake-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 50px;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+/* REMOVE CARD BACKGROUNDS */
+.dessert-item,
+.drink-item,
+.cake-item {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* PRODUCT IMAGES */
+.dessert-image img,
+.drink-image img,
+.cake-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+
+/* PRODUCT NAME */
+.dessert-name,
+.drink-name,
+.cake-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #D51604;
+    margin-top: 10px;
+}
+
+/* PRODUCT PRICE */
+.dessert-price,
+.drink-price,
+.cake-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #D51604;
+    margin-top: 4px;
+}
+
+/* ACTION BUTTONS */
+.dessert-actions,
+.drink-actions,
+.cake-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+.form {
+    padding-bottom: 120px;
+}

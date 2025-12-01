@@ -1,0 +1,105 @@
+@model List<final.Models.Product>
+
+<a asp-action="Create" class="btn btn-success add-product-btn">Add Product</a>
+
+<div class="dessert-section">
+    <h2 class="dessert-title">DESSERT</h2>
+    <div class="dessert-grid">
+        @foreach (var product in Model.Where(p => p.Category == "Dessert"))
+        {
+            <div class="dessert-item">
+
+                <div class="dessert-image">
+                    @if (!string.IsNullOrEmpty(product.ImagePath))
+                    {
+                        <img src="@product.ImagePath" />
+                    }
+                    else
+                    {
+                        <img src="/images/noimage.png" />
+                    }
+                </div>
+
+                <div class="dessert-name">@product.Name</div>
+                <div class="dessert-price">@product.Price CAD</div>
+
+                <div class="dessert-actions">
+                    <a asp-action="Edit" asp-route-id="@product.ProductId" class="btn btn-primary change-btn">Edit</a>
+
+                    <form asp-action="Delete" asp-route-id="@product.ProductId" method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-danger delete-btn">Delete</button>
+                    </form>
+                </div>
+
+            </div>
+        }
+    </div>
+</div>
+
+<div class="drink-section">
+    <h2 class="drink-title">DRINKS</h2>
+    <div class="drink-grid">
+        @foreach (var product in Model.Where(p => p.Category == "Drink"))
+        {
+            <div class="drink-item">
+
+                <div class="drink-image">
+                    @if (!string.IsNullOrEmpty(product.ImagePath))
+                    {
+                        <img src="@product.ImagePath" />
+                    }
+                    else
+                    {
+                        <img src="/images/noimage.png" />
+                    }
+                </div>
+
+                <div class="drink-name">@product.Name</div>
+                <div class="drink-price">@product.Price CAD</div>
+
+                <div class="drink-actions">
+                    <a asp-action="Edit" asp-route-id="@product.ProductId" class="btn btn-primary change-btn">Edit</a>
+
+                    <form asp-action="Delete" asp-route-id="@product.ProductId" method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-danger delete-btn">Delete</button>
+                    </form>
+                </div>
+
+            </div>
+        }
+    </div>
+</div>
+
+<div class="cake-section">
+    <h2 class="cake-title">CAKES</h2>
+    <div class="cake-grid">
+        @foreach (var product in Model.Where(p => p.Category == "Cake"))
+        {
+            <div class="cake-item">
+
+                <div class="cake-image">
+                    @if (!string.IsNullOrEmpty(product.ImagePath))
+                    {
+                        <img src="@product.ImagePath" />
+                    }
+                    else
+                    {
+                        <img src="/images/noimage.png" />
+                    }
+                </div>
+
+                <div class="cake-name">@product.Name</div>
+                <div class="cake-price">@product.Price CAD</div>
+
+                <div class="cake-actions">
+                    <a asp-action="Edit" asp-route-id="@product.ProductId" class="btn btn-primary change-btn">Edit</a>
+
+                    <form asp-action="Delete" asp-route-id="@product.ProductId" method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-danger delete-btn">Delete</button>
+                    </form>
+                </div>
+
+            </div>
+        }
+    </div>
+</div>

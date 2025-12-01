@@ -1,0 +1,32 @@
+@model final.Models.Product
+
+<h2>Add Product</h2>
+
+<form asp-action="Create" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Category</label>
+        <input asp-for="Category" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Price</label>
+        <input asp-for="Price" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Inventory</label>
+        <input asp-for="Inventory" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Upload Image</label>
+        <input type="file" name="imageFile" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Save</button>
+</form>
